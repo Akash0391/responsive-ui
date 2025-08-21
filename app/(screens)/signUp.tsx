@@ -3,10 +3,13 @@ import ScreensWrapper from "@/components/ScreensWrapper";
 import Typo from "@/components/Typo";
 import { router } from "expo-router";
 import React, { useState } from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { Dimensions, StyleSheet, TouchableOpacity, View } from "react-native";
 import Button from "@/components/Button";
 import PaginationDots from "@/components/PaginationDots";
 import Loading from "../../components/Loading";
+
+const { width, height } = Dimensions.get("window");
+
 
 const SignUp = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -15,7 +18,7 @@ const SignUp = () => {
   const handleSignUp = () => {
     setIsLoading(true);
     setTimeout(() => {
-      router.push("/(screens)/home");
+      router.push("/(user)/home"); 
       setIsLoading(false);
     }, 2000);
     
@@ -68,7 +71,7 @@ const SignUp = () => {
             <Typo
               size={18}
               fontWeight="bold"
-              color="white"
+              color="black"
               style={styles.terms}
             >
               I agree to the Terms of Service and Privacy Policy
@@ -82,7 +85,7 @@ const SignUp = () => {
           {isLoading ? (
             <Loading size="large" color="black" />
           ) : (
-            <Typo size={35} fontWeight="bold" color="black">
+            <Typo size={35} fontWeight="bold" color="white">
               SIGN UP
             </Typo>
           )}
@@ -98,45 +101,46 @@ export default SignUp;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 70,
+    paddingTop: height * 0.09,
     alignItems: "center",
-    paddingHorizontal: 20,
+    paddingHorizontal: width * 0.05,
   },
   inputContainer: {
     width: "90%",
   },
   inputTitle: {
-    marginTop: 20,
-    marginBottom: 10,
-    paddingLeft: 10,
+    marginTop: height * 0.02,
+    marginBottom: height * 0.01,
+    paddingLeft: width * 0.01,
   },
   button: {
     width: "75%",
-    marginTop: 100,
-    height: 80,
+    marginTop: height * 0.1,
+    height: height * 0.08,
+    backgroundColor: "lightblue",
   },
   terms: {
     alignSelf: "center",
-    marginTop: 20,
+    marginTop: height * 0.02,
   },
   checkboxContainer: {
-    paddingTop: 20,
+    paddingTop: height * 0.02,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    gap: 10,
+    gap: width * 0.02,
   },
   checkbox: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: "white",
+    borderColor: "black",
     borderRadius: 5,
-    padding: 10,
-    marginTop: 20,
+    padding: width * 0.02,
+    marginTop: height * 0.02,
   },
   tickBox: {
-   backgroundColor: "white",
+   backgroundColor: "black",
   },
 });

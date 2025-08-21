@@ -2,12 +2,11 @@ import { ActivityIndicator, ActivityIndicatorProps, StyleSheet, View } from 'rea
 import React from 'react'
 
 const Loading = ({  
-    size ,
-    color 
+    size = "large",
 }: ActivityIndicatorProps) => {
   return (
     <View style={{flex:1, justifyContent: "center", alignItems: "center"}}>
-        <ActivityIndicator size={size} color={color} />
+        <ActivityIndicator size={size} color={"white"} />
     </View>
   )
 }

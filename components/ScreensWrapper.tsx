@@ -10,7 +10,7 @@ const ScreensWrapper = ({
     children: React.ReactNode,
 }) => {   
 
-    let paddingTop = Platform.OS === "ios" ? height * 0.06 : 40;
+    let paddingTop = Platform.OS === "ios" ? height * 0.06 : height * 0.02;   
     let paddingBottom = 0;
 
   return (
@@ -18,7 +18,7 @@ const ScreensWrapper = ({
         style={{
         flex: 1,   
     }}
-    source={require("../assets/images/bgImage.png")}
+    source={require("@/assets/images/bgimage.png")}
     >
       <View style={{
         flex: 1,

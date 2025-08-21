@@ -3,7 +3,10 @@ import Button from "@/components/Button";
 import Typo from "@/components/Typo";
 import Wrapper from "@/components/Wrapper";
 import { router } from "expo-router";
-import { Image, StyleSheet, View } from "react-native";
+import { Dimensions, Image, StyleSheet, View } from "react-native";
+
+const { width, height } = Dimensions.get("window");
+  
 export default function Welcome() {
   return (
     <Wrapper>
@@ -20,7 +23,7 @@ export default function Welcome() {
             style={styles.logo}
             resizeMode="cover"
           />
-          <Button onPress={() => router.push("/(screens)/signUp")} style={{ marginTop: 100, width: "75%", height: 80 }}>
+          <Button onPress={() => router.push("/(screens)/signUp")} style={{ marginTop: height * 0.1, width: width * 0.75, height: height * 0.08 }}>
             <Typo size={35} fontWeight="bold" color="black">  
                 GET STARTED
             </Typo>
@@ -34,16 +37,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    paddingHorizontal: 20,
-    paddingTop: 70,
+    paddingHorizontal: width * 0.02,
+    paddingTop: height * 0.07,
     
   },
   logo: {
-    width: 230, 
-    height: 230,
+    width: width * 0.55,  
+    height: height * 0.25,
     backgroundColor: "white",
-    borderRadius: 200,
-    marginTop: 150,
-    marginBottom: 100,
+    borderRadius: 200,  
+    marginTop: height * 0.15,
+    marginBottom: height * 0.1,
   },  
   });

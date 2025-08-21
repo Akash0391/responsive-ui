@@ -1,8 +1,11 @@
   
 import { useRouter } from "expo-router";
 import React, { useEffect } from "react";
-import { StatusBar, StyleSheet, View } from "react-native";
+import { Dimensions, StatusBar, StyleSheet, View } from "react-native";
 import Animated, { FadeInDown } from "react-native-reanimated";
+import { heightPercentageToDP as hp, widthPercentageToDP as wp } from "react-native-responsive-screen";
+
+const { width, height } = Dimensions.get("window");
 
 export default function SplashScreen() {
   const router = useRouter();
@@ -37,8 +40,9 @@ const styles = StyleSheet.create({
   },
   logo: {
     aspectRatio: 1,
-    height: "23%",
+    height: height * 0.23,
     backgroundColor: "white",
     borderRadius: 2000,
   },
+
 });

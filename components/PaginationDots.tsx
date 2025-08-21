@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
   },
   activeDot: {
-    backgroundColor: "#00BFA6", // active (green/teal like your design)
+    backgroundColor: "lightblue", 
     width: 10,
     height: 10,
   },
