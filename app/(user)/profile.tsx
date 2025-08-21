@@ -21,7 +21,7 @@ const Profile = () => {
           <Typo
             size={height * 0.038}
             fontWeight="bold"
-            color="black"
+            color="lightblue"
             style={{marginBottom: height * 0.015}}
           >
             Your Name

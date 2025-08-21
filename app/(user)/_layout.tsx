@@ -1,4 +1,4 @@
-import { Image, Text, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native"; 
 import React from "react";
 import { Tabs } from "expo-router";
 import { icons } from "@/constants/icons";
@@ -36,7 +36,9 @@ const UserLayout = () => {
           position: "absolute",
           backgroundColor: "transparent",
           elevation: 0,
-          borderTopWidth: 0,
+          borderTopWidth: 1,
+          height: 90,
+          paddingTop: 10,
         },
       }}
     >
