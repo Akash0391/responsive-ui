@@ -43,6 +43,15 @@ const UserLayout = () => {
       }}
     >
       <Tabs.Screen
+        name="categories"
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon focused={focused} icon={icons.categories} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="home"
         options={{
           headerShown: false,
@@ -51,6 +60,7 @@ const UserLayout = () => {
           ),
         }}
       />
+      
       <Tabs.Screen
         name="profile"
         options={{
@@ -58,6 +68,13 @@ const UserLayout = () => {
           tabBarIcon: ({ focused }) => (
             <TabBarIcon focused={focused} icon={icons.dots} />
           ),
+        }}
+      />
+      
+      <Tabs.Screen
+        name="priceList"
+        options={{
+          href: null, // <-- hides from tab bar
         }}
       />
     </Tabs>

@@ -10,7 +10,7 @@ const Home = () => {
     <ScreensWrapper>
       <View style={styles.container}>
         <Typo
-          style={{ marginBottom: height * 0.03, fontSize: height * 0.05 }}
+          style={{ marginBottom: height * 0.035, fontSize: height * 0.04 }}
           fontWeight="bold"
           color="lightblue"
         >
@@ -18,16 +18,16 @@ const Home = () => {
         </Typo>
 
         <View style={styles.weatherContainer}>
-          <Typo size={height * 0.038} fontWeight="bold" color="black">
+          <Typo size={height * 0.03} fontWeight="bold" color="black">
             Today
           </Typo>
 
           {/* Morning */}
           <View style={styles.weatherInfo}>
-            <Typo size={height * 0.03} fontWeight="400" color="black">
+            <Typo size={height * 0.025} fontWeight="400" color="black">
               Morning:{""}
             </Typo>
-            <Typo size={height * 0.03} fontWeight="bold" color="lightblue">
+            <Typo size={height * 0.025} fontWeight="bold" color="lightblue">
               9°
             </Typo>
             <Image
@@ -38,10 +38,10 @@ const Home = () => {
 
           {/* Daytime */}
           <View style={styles.weatherInfo}>
-            <Typo size={height * 0.03} fontWeight="400" color="black">
+            <Typo size={height * 0.025} fontWeight="400" color="black">
               Daytime:{"  "}
             </Typo>
-            <Typo size={height * 0.03} fontWeight="bold" color="lightblue">
+            <Typo size={height * 0.025} fontWeight="bold" color="lightblue">
               14°
             </Typo>
             <Image
@@ -52,10 +52,10 @@ const Home = () => {
 
           {/* Evening */}
           <View style={styles.weatherInfo}>
-            <Typo size={height * 0.03} fontWeight="400" color="black">
+            <Typo size={height * 0.025} fontWeight="400" color="black">
               Evening:{"   "}
             </Typo>
-            <Typo size={height * 0.03} fontWeight="bold" color="lightblue">
+            <Typo size={height * 0.025} fontWeight="bold" color="lightblue">
               13°
             </Typo>
             <Image
@@ -66,10 +66,10 @@ const Home = () => {
 
           {/* Night */}
           <View style={styles.weatherInfo}>
-            <Typo size={height * 0.03} fontWeight="400" color="black">
+            <Typo size={height * 0.025} fontWeight="400" color="black">
               Night:{"      "}
             </Typo>
-            <Typo size={height * 0.03} fontWeight="bold" color="lightblue">
+            <Typo size={height * 0.025} fontWeight="bold" color="lightblue">
               7°
             </Typo>
             <Image
@@ -81,9 +81,9 @@ const Home = () => {
 
         <View style={styles.todayWeatherContainer}>
           <Typo size={height * 0.025} fontWeight="500" color="black">
-            Today{"                        "}
+            Today{"                   "}
           </Typo>
-          <Typo size={height * 0.03} fontWeight="bold" color="lightblue">
+          <Typo size={height * 0.025} fontWeight="bold" color="lightblue">
             10° – 16°
           </Typo>
           <Image
@@ -97,7 +97,7 @@ const Home = () => {
               <Typo size={height * 0.025} fontWeight="500" color="black">
                 11th September
               </Typo>
-              <Typo size={height * 0.03} fontWeight="bold" color="lightblue">
+              <Typo size={height * 0.025} fontWeight="bold" color="lightblue">
                 10° – 16°
               </Typo>
             </View>
@@ -107,7 +107,7 @@ const Home = () => {
               <Typo size={height * 0.025} fontWeight="500" color="black">
                 12th September
               </Typo>
-              <Typo size={height * 0.03} fontWeight="bold" color="lightblue">
+              <Typo size={height * 0.025} fontWeight="bold" color="lightblue">
                 10° – 16°
               </Typo>
             </View>
@@ -117,7 +117,7 @@ const Home = () => {
               <Typo size={height * 0.025} fontWeight="500" color="black">
                 13th September
               </Typo>
-              <Typo size={height * 0.03} fontWeight="bold" color="lightblue">
+              <Typo size={height * 0.025} fontWeight="bold" color="lightblue">
                 10° – 16°
               </Typo>
             </View>

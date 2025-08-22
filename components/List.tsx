@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Dimensions, StyleProp, StyleSheet, TouchableOpacity, View, ViewStyle } from "react-native";
 import React from "react";
 
 const { width, height } = Dimensions.get("window");
@@ -7,10 +7,12 @@ const List = ({
   children,
   onPress,          
   isFocused,
+  style,
 }: {    
   children: React.ReactNode;            
   onPress: () => void;      
-  isFocused: boolean;               
+  isFocused?: boolean;               
+  style?: StyleProp<ViewStyle>;
 }) => {
   return (
     <TouchableOpacity
@@ -18,8 +20,8 @@ const List = ({
       style={{  
         backgroundColor: isFocused ? "#C6F7F5" : "white",   
         borderWidth: 2, 
+        borderRadius: height * 0.01, 
         borderColor: "lightblue",
-        borderRadius: height * 0.01,  
         shadowColor: "black",
         shadowOffset: {width: 0, height: 2},
         shadowOpacity: 0.25,
@@ -27,7 +29,7 @@ const List = ({
         elevation: 5,
       }}    
     >
-      <View style={styles.container}>{children}</View>  
+      <View style={[styles.container, style]}>{children}</View>  
     </TouchableOpacity>
   );
 };
